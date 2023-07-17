@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c61ab4d9-3bc0-42ce-94dc-37364ae94f1c" name="更改" comment="new">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/git_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -89,7 +88,8 @@
       <updated>1689599277710</updated>
       <workItem from="1689599279568" duration="2224000" />
       <workItem from="1689605611792" duration="671000" />
-      <workItem from="1689606296828" duration="1976000" />
+      <workItem from="1689606296828" duration="2396000" />
+      <workItem from="1689609146258" duration="409000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <option name="closed" value="true" />
@@ -99,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689607095401</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new">
+      <option name="closed" value="true" />
+      <created>1689608748948</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689608748948</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new">
+      <option name="closed" value="true" />
+      <created>1689608954418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689608954418</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +133,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="new2" />
     <MESSAGE value="new" />
     <option name="LAST_COMMIT_MESSAGE" value="new" />
   </component>
