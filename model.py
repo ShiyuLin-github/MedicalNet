@@ -87,12 +87,17 @@ def generate_model(opt):
         print ('loading pretrained model {}'.format(opt.pretrain_path))
         pretrain = torch.load(opt.pretrain_path)
         pretrain_dict = {k: v for k, v in pretrain['state_dict'].items() if k in net_dict.keys()}
+        #这行代码实际上是将预训练模型的状态字典中与当前模型参数匹配的部分提取出来，以便进行参数加载。
+        # pretrain['state_dict'].items(): 这部分迭代了预训练模型状态字典的键值对，其中 pretrain['state_dict'] 是预训练模型的状态字典。
+        # if k in net_dict.keys(): 这个条件检查当前键 k 是否存在于当前模型的状态字典 net_dict 的键集合中。
+        # {k: v for k, v in ...}: 这个构造式创建了一个新的字典，其中只包含满足条件的键值对。这些键值对是预训练模型状态字典中与当前模型状态字典匹配的部分。
+        # 最终，pretrain_dict 将只包含与当前模型匹配的键值对，用于加载预训练模型的权重到当前模型。这样做是因为在迁移学习或微调任务中，通常只加载与当前模型架构匹配的参数。不匹配的参数将被忽略，或者根据需要进行初始化。这样可以避免由于模型架构不同导致的参数维度不匹配的问题。
          
         net_dict.update(pretrain_dict)
         model.load_state_dict(net_dict)
 
         new_parameters = [] 
-        for pname, p in model.named_parameters():
+        for pname, p in model.named_parameters(): #named_parameters() 方法返回一个迭代器，其中包含每个参数的名称（pname）和参数张量（p）。
             for layer_name in opt.new_layer_names:
                 if pname.find(layer_name) >= 0:
                     new_parameters.append(p)

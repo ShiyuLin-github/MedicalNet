@@ -75,7 +75,7 @@ def test(data_loader, model, img_names, sets):
 if __name__ == '__main__':
     # settting
     sets = parse_opts()
-    sets.target_type = "normal"
+    sets.target_type = "normal" #这里不是初始化文件定义的，而是新加的
     sets.phase = 'test'
 
     # getting model

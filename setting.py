@@ -6,7 +6,8 @@ Written by Whalechen
 import argparse
 
 def parse_opts():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser() #类似初始化一个parser方便后续操作，括号内可以输入描述：argparse.ArgumentParser(description='Description of your program')
+
     parser.add_argument(
         '--data_root',
         default='./data',
@@ -110,7 +111,9 @@ def parse_opts():
         '--manual_seed', default=1, type=int, help='Manually set random seed')
     parser.add_argument(
         '--ci_test', action='store_true', help='If true, ci testing is used.')
+    #action='store_true': 这个参数指定了当命令行中出现了--ci_test这个标志时，该参数的值应该设置为True。如果不使用action='store_true'，则该参数将期望接收一个值（例如：--ci_test value），而不是一个简单的开关。
     args = parser.parse_args()
     args.save_folder = "./trails/models/{}_{}".format(args.model, args.model_depth)
+    #"./trails/models/{}_{}".format(args.model, args.model_depth): 这是字符串格式化操作。在这里，我们使用了一个字符串模板，其中用花括号 {} 表示一个或多个待替换的占位符。format() 方法用于将占位符替换为实际的值。
     
     return args
